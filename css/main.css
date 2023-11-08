@@ -1,0 +1,437 @@
+/* Start Golobel Sules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --min-color: #e8272e;
+    --min-color-black: black;
+    --min-color-white: white;
+    --min-color-EEE: #f9f2f2;
+    --main-color-border: #7f7f7f;
+}
+body {
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--min-color-EEE);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Mudium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Golobel Sules */
+/* Start section */
+.container {
+    position: relative;
+    background-color: var(--min-color-EEE);
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+@media (max-width: 768px) {
+    .container {
+        justify-content: center;
+
+    }
+}
+section {
+    display: block;
+    overflow: hidden;
+
+}
+section .box {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    box-shadow: 2px 2px 15px 0px black;
+    border-radius: 8px;
+    background-color: #eee;
+    margin-bottom: 25px; 
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    section .box {
+        display: flex;
+        flex-direction: column;
+    }
+}
+section .box:hover {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+section .box img {
+    width: 240px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+@media (max-width: 768px) {
+    section .box img {
+        width: 100%;
+        height: 315px;
+    }
+}
+section .box .info {
+    width: 525px;
+}
+section .box .info h2 {
+    margin-left: 30px;
+
+}
+section .box .info .data-comment {
+    display: flex;
+    margin-left: 30px;
+}
+section .box .info .data-comment .date {
+    margin-right: 25px;
+    position: relative;
+}
+section .box .info .data-comment .date::after {
+    content: "";
+    position: absolute;
+    right: -14px;
+    width: 2px;
+    height: 14px;
+    background-color: black;
+}
+section .box .info .data-comment .date i,
+section .box .info .data-comment .comment i {
+    color: var(--min-color);
+    margin-right: 5px;
+}
+section .box .info p {
+    margin-left: 25px;
+    line-height: 2;
+
+}
+@media (max-width: 768px) {
+    section .box .info p {
+        width: 330px;
+        line-height: 2;
+    }
+}
+
+section .box .info h4 {
+    margin-left: 25px;
+    color: var(--min-color);
+    cursor: pointer;
+}
+/* End section */
+/* Start nav */
+nav {
+    width: 320px;
+    margin-left: 20px;
+}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    nav {
+        display: none;
+    }
+
+}
+nav .inputs input {
+    padding: 7px 21px;
+    border-radius: 25px;
+    border-color: transparent;
+    position: relative;
+    outline: none;
+
+}
+nav .inputs::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+    font-weight: 900;
+    position: relative;
+    top: 1px;
+    right: 35px;
+}
+nav .links .artikl,
+nav .posts .artikl,
+nav .instgram .artikl,
+nav .tags .artikl {
+    padding: 20px 20px;
+    border-bottom: 2px solid var(--main-color-border);
+    font-weight: bold;
+}
+nav .links ul {
+    color: #6f6f6f;
+    margin-left: -30px;
+}
+nav .links ul li {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+    cursor: pointer;
+}
+nav .links ul li:hover {
+    color: var(--min-color);
+}
+nav .links ul li .arts i {
+    margin-right: 15px;
+}
+nav .posts .post:nth-last-child(2),
+nav .posts .post:nth-last-child(1) {
+    border-top: 2px solid var(--main-color-border);
+}
+nav .posts .post {
+    display: flex;
+    margin: 15px 0;
+    padding-top: 10px;
+
+}
+nav .posts .post img {
+    width: 100px;
+    border-radius: 8px;
+}
+nav .posts .post .post-p p {
+    margin-left: 15px;
+}
+nav .posts .post .post-p .post-d-c {
+    display: flex;
+    margin-left: 15px;
+
+}
+nav .posts .post .post-p .post-d-c .post-d {
+    margin-right: 20px;
+}
+nav .posts .post .post-p .post-d-c .post-d i,
+nav .posts .post .post-p .post-d-c .post-c i {
+    color: var(--min-color);
+}
+nav .book-now img {
+    width: 320px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+nav .instgram .photos{
+    margin-top: 13px;
+
+}
+nav .instgram .photos img {
+    width: 100px;
+    border-radius: 12px;
+    margin: 2px;
+}
+nav .tags a {
+    border: 10px solid #dddddd;
+    background-color: #dddddd;
+    color: var(--min-color-black);
+    border-radius: 25px;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+nav .tags a:hover {
+    background-color:#b9b9b9 ;
+    border-color: #b9b9b9;
+}
+/* End nav */
+/* Start pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination .checked {
+    background-color: var(--min-color);
+    color: var(--min-color-white);
+}
+@media (max-width: 768px) {
+    .pagination {
+        position: relative;
+        left: -20px;
+}
+    }
+.pagination ul {
+    display: inline-flex;
+}
+.pagination ul li {
+    margin: 0 6px;
+    margin-top: 60px;
+    border: 1px solid var(--main-color-border);
+    padding: 15px;
+    border-radius: 25%;
+    font-size: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+    cursor:pointer;
+}
+.pagination ul li:hover {
+    background-color: var(--min-color);
+
+}
+.pagination ul li a {
+    color: var(--main-color-border);
+    transition: 0.3s;
+
+}
+.pagination ul li a:hover {
+    color: var(--min-color-white);
+}
+
+/* End pagination */
+/* Start Footer  */
+footer {
+    position: relative;
+    overflow: hidden;
+}
+footer .contact {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--min-color);
+    color: var(--min-color-white);
+    position: relative;
+    top: 83px;
+    margin: 0 auto;
+    height: 170px;
+    border-radius: 13px;
+}
+@media (max-width: 768px) {
+    footer .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+
+    }
+    footer .photo {
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    footer .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 335px;
+        margin-bottom: 50px;
+    }
+    footer .photo {
+        display: none;
+    }
+}
+footer .contact .info {
+    width: 480px;
+
+}
+@media (max-width: 768px) {
+    footer .contact .info {
+        width: 400px;
+
+    }
+}
+footer .contact .info h2 {
+    margin-top: -10px;
+    margin-left: 40px;
+}
+footer .contact .info p {
+    margin-left: 40px;
+}
+footer .contact form .email {
+    padding: 20px;
+    width: 500px;
+    background-color: var(--min-color);
+    box-shadow: inset 0px 0px 20px 0px white;
+    border-radius: 44px;
+    color: var(--min-color-white);
+    outline: none;
+    border-color: transparent;
+}
+footer .contact form ::placeholder {
+    color: var(--min-color-white);
+}
+@media (max-width: 768px) {
+    footer .contact form .email {
+        width: 376px;
+        position: relative;
+        top: 3em;
+
+    }
+}
+
+footer .contact form .submit {
+    position: relative;
+    right: 123px;
+    padding: 10px;
+    border-radius: 35px;
+    outline: none;
+    border: transparent;
+    background: #eee;
+
+}
+@media (max-width: 768px) {
+    footer .contact form .submit {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        top: 61px;
+}
+    }
+@media (max-width: 992px) {
+    footer .contact .info  {
+        position: relative;
+        top: 2em;
+        width: 658px;
+
+}
+    footer .contact form  {
+        position: relative;
+        top: -7em;
+}
+    }
+    @media (max-width: 768px) {
+        footer .contact .info {
+            position: relative;
+            top: 2em;
+            width: 400px;
+    }
+        footer .contact .info p {
+            line-height: 2;
+    }
+        footer .contact form  {
+            position: relative;
+            top: -7em;
+    }
+        }
+
+footer .photo  img {
+    width: 100%;
+    margin-bottom: -5px;
+
+}
+/* End Footer  */
